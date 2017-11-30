@@ -1,0 +1,88 @@
+body {
+    background-color: lightgray;
+    height: 100vh;
+    margin: 0;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+#app {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#header {
+    text-align: center;
+    font-size: 3em;
+    padding: 20px;
+}
+
+#page-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    min-height: 85vh;
+}
+
+#note-menu, #active-note {
+    border: 2px solid rgb(62, 159, 211);
+    border-radius: 10px;
+}
+
+#note-menu {
+    background-color: white;
+    min-width: 25%;
+    z-index: 2;
+    position: relative;
+}
+
+#note-header {
+    font-size: 2em;
+    width: 90%;
+    margin: auto;
+    padding: 10px 5px 0 5px;;
+    border: none;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+input, input:focus {
+    border: none;
+    outline: none;
+}
+
+#notes-list {
+    margin: 3% 5%;
+}
+
+.note {
+    width: 100%;
+    position: relative;
+}
+
+#delete {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+#clear {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#active-note {
+    background-color: white;
+    min-width: 60%;
+    font-size: 3em;
+    padding: 2% 2% 0 2%;
+}
+
+@media screen and (min-width: 956px) {
+    #active-note {
+        margin-left: -5px;
+    }
+}
