@@ -66,7 +66,10 @@ class App extends Component {
 
           {/* Holds menu that displays the different notes */}
           <div id='note-menu'>
-            <NoteHeader onChange={this.handleChange} onClick={this.handleClick} onKeyPress={this.handleKeyPress} />
+            <NoteHeader
+              onChange={this.handleChange}
+              onClick={this.handleClick}
+              onKeyPress={this.handleKeyPress} />
 
             {/* Notes go here */}
             <ul id='notes-list'>

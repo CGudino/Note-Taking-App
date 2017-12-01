@@ -31,6 +31,7 @@ body {
 #note-menu {
     background-color: white;
     min-width: 25%;
+    max-width: 25%;
     z-index: 2;
     position: relative;
 }
@@ -50,15 +51,25 @@ body {
 input, input:focus {
     border: none;
     outline: none;
+    width: 100%;
 }
 
 #notes-list {
-    margin: 3% 5%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .note {
-    width: 100%;
+    width: 90%;
     position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.note-text {
+    width: 90%;
+    margin-right: 10%;
 }
 
 #delete {
@@ -77,6 +88,7 @@ input, input:focus {
 #active-note {
     background-color: white;
     min-width: 60%;
+    max-width: 60%;
     font-size: 3em;
     padding: 2% 2% 0 2%;
 }
@@ -84,5 +96,11 @@ input, input:focus {
 @media screen and (min-width: 956px) {
     #active-note {
         margin-left: -5px;
+    }
+}
+
+@media screen and (max-width: 955px) {
+    #note-menu, #active-note {
+        min-width: 100%;
     }
 }
