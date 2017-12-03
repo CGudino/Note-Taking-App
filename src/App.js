@@ -12,6 +12,7 @@ class App extends Component {
       notes: [],
       activeNote: ''
     };
+    
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.noteClick = this.noteClick.bind(this);
@@ -53,8 +54,9 @@ class App extends Component {
   }
 
   // Deletes note that was clicked
-  handleDelete() {
-    alert('Delete functionality coming soon!');
+  handleDelete(e) {
+    let deleteElem = e.target.parentNode;
+    deleteElem.parentNode.removeChild(deleteElem);
   }
 
   render() {

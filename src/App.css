@@ -30,8 +30,8 @@ body {
 
 #note-menu {
     background-color: white;
-    min-width: 25%;
-    max-width: 25%;
+    min-width: 30%;
+    max-width: 30%;
     z-index: 2;
     position: relative;
 }
@@ -57,6 +57,7 @@ input, input:focus {
 #notes-list {
     width: 100%;
     overflow: hidden;
+    padding-bottom: 50px;
 }
 
 .note {
