@@ -8,15 +8,30 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      greeting: 'Welcome to your notes!',
       input: '',
       notes: [],
       activeNote: ''
     };
     
+    // Bindings
+    this.changeUserName = this.changeUserName.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.noteClick = this.noteClick.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+  }
+
+  // Changes name of the user using app
+  changeUserName() {
+    let newUserName = prompt('What is your name?');
+    newUserName.length > 0 ?
+      this.setState({
+        greeting: `Welcome to ${newUserName}'s notes!`
+      })
+      : this.setState({
+        greeting: 'Welcome to your notes!'
+      });
   }
 
   // Enter triggers handleClick()
@@ -62,7 +77,9 @@ class App extends Component {
   render() {
     return (
       <div id='app'>
-        <Header />
+        <Header
+          userName={this.state.greeting}
+          onClick={this.changeUserName} />
 
         <div id='page-content'>
 

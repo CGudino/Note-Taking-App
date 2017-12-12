@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export const Header = () => {
-    return (
-        <div id='header'>
-            Welcome to your notes!
-        </div>
-    );
+export class Header extends Component {
+    render() { 
+        return (
+            <div id='header'>
+                <span onClick={this.props.onClick}>{this.props.userName}</span>
+            </div>
+        );
+    }
 }
